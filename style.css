@@ -1,0 +1,134 @@
+/* body */
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* countdown */
+.countdownDiv {
+    margin: 20px auto;
+    padding: 2em;
+    max-width: 300px;
+    background: #1c1f2b;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* mydei's kit */
+.mydeiKitDiv {
+    margin: 20px auto;
+    padding: 2em;
+    max-width: 1000px;
+    background: #1c1f2b;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* slideshow */
+.slideshowDiv {
+    margin: auto;
+    padding: 2em;
+    max-width: 1000px;
+    background: #1c1f2b;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+}
+
+.slideDiv {
+    display: none;
+}
+
+.prevBtn, .nextBtn {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.nextBtn {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prevBtn:hover, .nextBtn:hover {
+    background-color: rgba(255, 255, 255, 0,8);
+}
+
+.slideText {
+    font-size: 12px;
+    top: 0;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.active {
+    background-color: #871615;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* border */
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.countdownDiv::after,
+.countdownDiv::before,
+.slideshowDiv::after,
+.slideshowDiv::before,
+.mydeiKitDiv::after,
+.mydeiKitDiv::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), transparent 50%, #f3ccbf, #871615);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+}
+
+.countdownDiv::before,
+.slideshowDiv::before,
+.mydeiKitDiv::before {
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
