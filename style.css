@@ -61,6 +61,10 @@ body {
     border-radius: 3px 0 0 3px;
 }
 
+.prevBtn {
+    visibility: hidden;
+}
+
 .prevBtn:hover, .nextBtn:hover {
     background-color: rgba(255, 255, 255, 0,8);
 }
