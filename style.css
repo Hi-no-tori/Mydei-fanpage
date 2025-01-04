@@ -10,12 +10,6 @@ video {
     border-radius: 20px;
 }
 
-.media {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
 .video {
     margin: auto;
     padding: 2em;
@@ -161,12 +155,4 @@ video {
     to {
         --angle: 360deg;
     }
-}
-
-/* audio */
-audio {
-    filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(12%);
-    width: 250px;
-    height: 40px;
-    transition: width 0.3s;
 }
