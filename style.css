@@ -16,16 +16,6 @@ video {
     justify-content: center;
 }
 
-.music {
-    margin: auto;
-    padding: 2em;
-    max-width: 300px;
-    background: #1c1f2b;
-    text-align: center;
-    border-radius: 10px;
-    position: relative;
-}
-
 .video {
     margin: auto;
     padding: 2em;
