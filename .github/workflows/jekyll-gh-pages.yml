@@ -2,7 +2,7 @@
 name: Deploy Jekyll with GitHub Pages dependencies preinstalled
 
 baseurl: /Mydei-fanpage
-url: http://hi-no-tori.github.io
+url: https://hi-no-tori.github.io
 
 on:
   # Runs on pushes targeting the default branch

@@ -130,8 +130,6 @@ video {
 .slideshowDiv::before,
 .mydeiKitDiv::after,
 .mydeiKitDiv::before,
-.music::after,
-.music::before,
 .video::after,
 .video::before {
     content: '';
@@ -151,7 +149,6 @@ video {
 .countdownDiv::before,
 .slideshowDiv::before,
 .mydeiKitDiv::before,
-.music::before,
 .video::before {
     filter: blur(1.5rem);
     opacity: 0.5;
